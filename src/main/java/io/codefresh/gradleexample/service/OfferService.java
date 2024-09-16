@@ -12,6 +12,7 @@ import io.codefresh.gradleexample.response.OfferResponse;
 import io.codefresh.gradleexample.response.ReviewResponse;
 import io.codefresh.gradleexample.store.entity.*;
 import io.codefresh.gradleexample.store.repository.*;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +20,7 @@ import java.util.*;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class OfferService {
     private final TenderRepository tenderRepository;
     private final EmployeeRepository employeeRepository;

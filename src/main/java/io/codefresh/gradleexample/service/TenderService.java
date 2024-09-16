@@ -13,6 +13,7 @@ import io.codefresh.gradleexample.store.repository.EmployeeRepository;
 import io.codefresh.gradleexample.store.repository.OrganizationRepository;
 import io.codefresh.gradleexample.store.repository.OrganizationResponsibleRepository;
 import io.codefresh.gradleexample.store.repository.TenderRepository;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -20,6 +21,7 @@ import java.util.*;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class TenderService {
     private final TenderRepository tenderRepository;
     private final TenderMapper tenderMapper;
